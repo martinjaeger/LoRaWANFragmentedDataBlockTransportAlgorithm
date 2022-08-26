@@ -10,13 +10,23 @@ https://lora-alliance.org/sites/default/files/2018-09/fragmented_data_block_tran
 
 The library contains a [Codeblocks](http://www.codeblocks.org/) project. You could download Codeblocks from its official website to compile and run the test example.
 
+### With CMake
+
+```
+mkdir build
+cd build
+cmake ..
+cmake --build .
+cat input.bin | ./frag_decoder
+```
+
 ## Documentation
 
 Check my blog: <https://jiapeng.me/lorawan-fragmented-data-block-transport-algorithm/> (in Chinese)
 
 ## History
 
-The original implementation is provided by ARMmbed or Semtech in below mentioned link. I rewrite the code in C (Originally provided in C++). The optimization is to use bitmap instead of buffer to reduce memory cost, and of course it will run slower than the ARMmbed or Semtech library. 
+The original implementation is provided by ARMmbed or Semtech in below mentioned link. I rewrite the code in C (Originally provided in C++). The optimization is to use bitmap instead of buffer to reduce memory cost, and of course it will run slower than the ARMmbed or Semtech library.
 
 https://github.com/ARMmbed/mbed-lorawan-update-client/blob/master/fragmentation/source/FragmentationMath.cpp
 
